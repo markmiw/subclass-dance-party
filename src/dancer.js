@@ -1,8 +1,8 @@
 // Creates and returns a new dancer object that can step
 var makeDancer = function(top, left, timeBetweenSteps) {
   //create unique element id
-  id = JSON.stringify(window.dancers.length);
-  let str = '<span id = "' + id + '" class="dancer"></span>';
+  this.id = JSON.stringify(window.dancers.length);
+  let str = '<span id = "' + this.id + '" class="dancer"></span>';
 
   // use jQuery to create an HTML <span> tag
   this.$node = $(str);

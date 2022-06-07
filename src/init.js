@@ -100,7 +100,6 @@ $(document).ready(function() {
     for (let i = 0; i < window.objectDistances.length; i++) {
       let [Obj1top, Obj1left] = window.objectDistances[i];
       for (let j = i + 1; j < window.objectDistances.length; j++) {
-        debugger;
         let [Obj2top, Obj2left] = window.objectDistances[j];
         let distance = Math.pow(Math.pow((Obj2left - Obj1left), 2) + Math.pow((Obj2top - Obj1top), 2), .5);
         if (distance < 100) {
@@ -154,6 +153,33 @@ $(document).ready(function() {
       }
     }
 
+  });
+
+
+  //Go Crazy Button
+  $('.goCrazyButton').on('click', function(event) {
+    var dancerMakerFunctionName = $(this).data
+    ('operate-dancer-function-name');
+
+    // get the maker function for the kind of dancer we're supposed to make
+   // var dancerMakerFunction = window[dancerMakerFunctionName];
+
+    // make a dancer with a random position
+    for (var i = 0; i < window.dancers.length; i++) {
+      // let ypos = (i * 20);
+      // let yposstr = ypos + 'px';
+      // let xpos = 300;
+      // let xposstr = xpos + 'px';
+      // window.objectDistances[i] = [ypos, xpos];
+      debugger;
+      var dancer = window.dancers[i];
+      const element = document.getElementById(window.dancers[i].id);
+      element.remove();
+      window.dancers[i].top = $("body").height() * Math.random();
+      window.dancers[i].left = $("body").width() * Math.random();
+      $('body').append(window.dancers[i].$node);
+      // dancer.lineup(yposstr, xposstr);
+    }
   });
 
 });
