@@ -6,11 +6,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
+    <script src="src/blueDancer.js"></script>
+    <script src="src/yellowDancer.js"></script>
+    <style>
+      body {
+        background-image: url('src/images.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      </style>
   </head>
   <body>
     <div class="topbar">
       <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>    </div>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>
+      <a href="#" class="addBlueDancerButton" data-dancer-maker-function-name="blueDancer">Make Blue Dancer</a>   </div>
+      <a href="#" class="addYellowDancerButton" data-dancer-maker-function-name="yellowDancer">Make Yellow Dancer</a>
+      <a href="#" class="lineUpButton" operate-dancer-function-name="lineUp">Line up</a>   </div>
     <script src="src/init.js"></script>
   </body>
 </html>
